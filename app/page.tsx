@@ -1,5 +1,9 @@
 import { Main, Section, Container } from "@/components/craft";
 import Balancer from "react-wrap-balancer";
+import Image from "next/image";
+import DeniLogo from "@/public/denilogo.png";
+import cyber from "@/public/cyber.jpg";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -16,37 +20,28 @@ export default function Home() {
 const ExampleJsx = () => {
   return (
     <article className="prose-m-none">
-      <h1>
-        <Balancer>
-          Hello World, welcome to the Next.js and{" "}
-          <a href="https://github.com/brijr/craft">brijr/craft</a> Starter!
-        </Balancer>
-      </h1>
-      <a className="h-16 block" href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbrijr%2Fcraft-starter">
-        {/* eslint-disable-next-line */}
-        <img
-          className="not-prose my-4"
-          src="https://vercel.com/button"
-          alt="Deploy with Vercel"
-        />
-      </a>
-      <p>
-        Welcome to the{" "}
-        <a href="https://github.com/brijr/craft-starter">Craft Starter</a> by{" "}
-        <a href="https://bridger.to">Bridger Tower</a>. This Next JS template
-        has been set up based on the recommended{" "}
-        <a
-          className="underline"
-          href="https://ui.shadcn.com/docs/installation/next"
-        >
-          Shadcn/ui Next.js setup
-        </a>
-        . Use this template paired with{" "}
-        <a href="https://components.bridger.to">brijr/components</a> for rapid
-        building.
-      </p>
+      <article className="not-prose">
+        <h1 className="text-4xl font-extrabold italic m-0 p-0 flex items-center gap-2">
+        
+            <Balancer>
+              <Image src={DeniLogo} alt="Deni Logo" width={300} height={300} />
+              <p className="text-4xl font-extrabold italic m-0 p-0">Frontend Developer</p>
+            </Balancer>
+
+        
+            <div className="flex items-center gap-2 ml-auto mr-30">
+              <Balancer>
+                <Image src={cyber} alt="cyber" width={200} height={200} />
+              </Balancer>
+            </div>
+         {/* Personal Info */}
+        </h1>
+      </article>
+     
+      
       <hr />
-      <h2>Example Heading</h2>
+      {/* Programing Language */}
+      <h2>Frameworks</h2>
       <p>
         This is an example paragraph to illustrate what an article section might
         look like in this context. You can add more content here to expand on
@@ -57,7 +52,19 @@ const ExampleJsx = () => {
         <li>List Item 2</li>
         <li>List Item 3</li>
       </ul>
-      <h3>This is an example H3</h3>
+      <hr />
+      <h2>Languages</h2>
+      <p>
+        This is an example paragraph to illustrate what an article section might
+        look like in this context. You can add more content here to expand on
+        the topic and provide more detailed information to your readers.
+      </p>
+      <ul>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+      </ul>
+      <h3>Gear</h3>
       <p>
         Further explore the topic by discussing relevant points, providing
         insights, or sharing experiences that can engage the audience. An
@@ -102,14 +109,6 @@ function exampleFunction() {
           </tr>
         </tbody>
       </table>
-      <figure>
-        {/* eslint-disable-next-line */}
-        <img
-          src="https://i.pinimg.com/564x/fc/f0/c2/fcf0c274e3f20b0ea3b27a9c04f0269c.jpg"
-          alt="Example Image"
-        />
-        <figcaption>This is an example figure caption.</figcaption>
-      </figure>
     </article>
   );
 };
